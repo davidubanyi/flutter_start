@@ -43,8 +43,7 @@ class AuthenticationBloc
   Stream<AuthenticationState> _mapAppSignUpLoadedState(
       AppLoadedup event) async* {
     yield AuthenticationLoading();
-    try {
-      await Future.delayed(Duration(milliseconds: 500)); // a simulated delay
+    try {// a simulated delay
       final SharedPreferences sharedPreferences = await prefs;
       if (sharedPreferences.getString('authtoken') != null) {
         yield AppAutheticated();
@@ -61,7 +60,6 @@ class AuthenticationBloc
     final SharedPreferences sharedPreferences = await prefs;
     yield AuthenticationLoading();
     try {
-      await Future.delayed(Duration(milliseconds: 500)); // a simulated delay
       final data = await authenticationService.signUpWithEmailAndPassword(
           event.email, event.password);
 
@@ -87,7 +85,6 @@ class AuthenticationBloc
     final SharedPreferences sharedPreferences = await prefs;
     yield AuthenticationLoading();
     try {
-      await Future.delayed(Duration(milliseconds: 500)); // a simulated delay
       final data = await authenticationService.loginWithEmailAndPassword(
           event.email, event.password);
       if (data["error"] == null) {

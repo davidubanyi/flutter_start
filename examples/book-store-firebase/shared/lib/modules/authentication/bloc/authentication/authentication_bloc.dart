@@ -40,7 +40,6 @@ class AuthenticationBloc
       AppLoadedup event) async* {
     yield AuthenticationLoading();
     try {
-      await Future.delayed(Duration(milliseconds: 500)); // a simulated delay
       final firebaseUser = await authenticationService.getUserData();
       if (firebaseUser != null) {
         yield AppAutheticated();
@@ -56,7 +55,6 @@ class AuthenticationBloc
   Stream<AuthenticationState> _mapUserSignupToState(UserSignUp event) async* {
     yield AuthenticationLoading();
     try {
-      await Future.delayed(Duration(milliseconds: 500)); // a simulated delay
       final firebaseUser = await authenticationService
           .signUpWithEmailAndPassword(event.email, event.password);
       if (firebaseUser != null) {
@@ -71,7 +69,6 @@ class AuthenticationBloc
   Stream<AuthenticationState> _mapUserLoginState(UserLogin event) async* {
     yield AuthenticationLoading();
     try {
-      await Future.delayed(Duration(milliseconds: 500)); // a simulated delay
       final firebaseUser = await authenticationService
           .loginWithEmailAndPassword(event.email, event.password);
       if (firebaseUser != null) {
