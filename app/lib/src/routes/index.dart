@@ -1,4 +1,5 @@
 // routes for the app
+import 'package:app/src/screens/contributions/wallet.dart';
 import 'package:app/src/screens/home/index.dart';
 import 'package:app/src/screens/onboarding/authentication_screen.dart';
 import 'package:app/src/splash_screen.dart';
@@ -12,6 +13,8 @@ Route routes(RouteSettings settings) {
       return MaterialPageRoute(builder: (_) => HomeScreen());
     case '/auth':
       return MaterialPageRoute(builder: (_) => AuthenticationScreen());
+    case '/wallet':
+      return MaterialPageRoute(builder: (_)=> WalletScreen());
     default:
       return MaterialPageRoute(builder: (_) => SplashScreen());
   }

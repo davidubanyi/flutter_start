@@ -34,8 +34,10 @@ class AuthenticationBloc
     }
     if (event is GetUserData) {
       int currentUserId = sharedPreferences.getInt('userId');
+      print(currentUserId);
       final data = await authenticationService.getUserData(currentUserId ?? 4);
       final currentUserData = CurrentUserData.fromJson(data);
+      print(currentUserData);
       yield SetUserData(currentUserData: currentUserData);
     }
   }

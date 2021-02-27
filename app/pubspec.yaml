@@ -36,6 +36,8 @@ dependencies:
   equatable: ^1.1.0
   fluttertoast: ^7.1.1
   cached_network_image: ^2.3.3
+  flutter_money_formatter: ^0.8.3
+  percent_indicator: ^2.1.9+1
   shared:
     path: ../shared
 dev_dependencies:
