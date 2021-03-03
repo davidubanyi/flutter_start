@@ -65,6 +65,11 @@ flutter:
     - assets/images/logo.png
     - assets/images/2.0x/logo.png
     - assets/images/3.0x/logo.png
+    - assets/images/fund_wallet_dashboard.png
+    - assets/images/create_locked_plan.png
+    - assets/images/create_fixed_plan.png
+    - assets/images/no_active_loan.png
+    - assets/images/create_goal_plan.png
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

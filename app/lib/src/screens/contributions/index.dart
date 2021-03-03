@@ -1,9 +1,9 @@
 import 'package:app/src/components/contribution_card.dart';
+import 'package:app/src/components/my_money_formatter.dart';
 import 'package:app/src/config/color_constants.dart';
 import 'package:flutter/material.dart';
 
-num amount = 7993344;
-Color _altBlue = ColorConstants.contributionAltBlue;
+double amount = 7993344;
 
 class ContributionsHome extends StatelessWidget {
   @override
@@ -25,8 +25,8 @@ class ContributionsHome extends StatelessWidget {
               SizedBox(
                 height: 15,
               ),
-              Text(
-                '₦$amount',
+              MyMoneyFormatter(
+                moneyValue: amount,
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 24,

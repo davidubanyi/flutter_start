@@ -10,7 +10,9 @@ class MyMoneyFormatter extends StatelessWidget {
       FlutterMoneyFormatter(
               amount: myMoneyFormatter.moneyValue,
               settings: MoneyFormatterSettings(
-                  symbol: '₦', symbolAndNumberSeparator: ''))
+                  symbol: '₦', symbolAndNumberSeparator: '',
+                fractionDigits: 0
+                 ))
           .output;
   @override
   Widget build(BuildContext context) {

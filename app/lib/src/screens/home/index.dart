@@ -1,6 +1,7 @@
 // home screen contents
 import 'package:app/src/config/color_constants.dart';
 import 'package:app/src/config/image_constants.dart';
+import 'package:app/src/screens/home/dashboard.dart';
 import 'package:app/src/screens/loans/index.dart';
 
 import 'package:app/src/utils/app_state_notifier.dart';
@@ -53,10 +54,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
   static TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static List<Widget> _widgetOptions = <Widget>[
-    Text(
-      'Index 0: Home',
-      style: optionStyle,
-    ),
+    NewUserDashboard(),
     LoanIndex(),
     ContributionsHome(),
     Column(
