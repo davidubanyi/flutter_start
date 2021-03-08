@@ -1,17 +1,11 @@
 // home screen contents
 import 'package:app/src/config/color_constants.dart';
-import 'package:app/src/config/image_constants.dart';
 import 'package:app/src/screens/home/dashboard.dart';
 import 'package:app/src/screens/loans/index.dart';
-
-import 'package:app/src/utils/app_state_notifier.dart';
-import 'package:app/src/widgets/cache_image_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/basic.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:provider/provider.dart';
 import 'package:shared/main.dart';
-import 'package:app/src/config/string_constants.dart' as string_constants;
 import 'package:app/src/screens/contributions/index.dart';
 
 class HomeScreen extends StatelessWidget {

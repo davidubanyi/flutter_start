@@ -16,7 +16,7 @@ class NewUserDashboard extends StatelessWidget {
                 fontWeight: FontWeight.bold
             ),),
             Container(
-              constraints: BoxConstraints.expand(height: 200),
+              constraints: BoxConstraints.expand(height: 164),
               margin: EdgeInsets.only(top: 20),
               child: GestureDetector(
                   onTap: ()=>{},

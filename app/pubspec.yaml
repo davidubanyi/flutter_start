@@ -35,8 +35,12 @@ dependencies:
   bloc: ^6.0.3
   equatable: ^1.1.0
   fluttertoast: ^7.1.1
+  firebase_core: "^0.7.0"
+  firebase_auth: "^0.20.1"
   cached_network_image: ^2.3.3
-  flutter_money_formatter: ^0.8.3
+  flutter_money_formatter:
+    git:
+      url: git://github.com/anisalibegic/flutter_money_formatter.git
   percent_indicator: ^2.1.9+1
   shared:
     path: ../shared
