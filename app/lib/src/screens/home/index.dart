@@ -1,6 +1,7 @@
 // home screen contents
 import 'package:app/src/config/color_constants.dart';
 import 'package:app/src/screens/home/dashboard.dart';
+import 'package:app/src/screens/loans/apply_for_loan.dart';
 import 'package:app/src/screens/loans/index.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/basic.dart';
@@ -51,14 +52,7 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
     NewUserDashboard(),
     LoanIndex(),
     ContributionsHome(),
-    Column(
-      children: [
-        Text(
-          'Index 3: Settings',
-          style: optionStyle,
-        ),
-      ],
-    ),
+    ApplyForLoanForm()
   ];
 
   void _onItemTapped(int index) {
@@ -80,7 +74,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
         showUnselectedLabels: true,
         backgroundColor: ColorConstants.bottomNavBarBackground,
         items: const <BottomNavigationBarItem>[
-
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
             label: 'Home',
@@ -97,7 +90,6 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
             icon: Icon(Icons.settings),
             label: 'Settings',
           ),
-
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: Colors.amber[800],
