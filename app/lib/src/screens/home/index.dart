@@ -8,11 +8,16 @@ import 'package:flutter/src/widgets/basic.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:shared/main.dart';
 import 'package:app/src/screens/contributions/index.dart';
+import 'package:flutter_paystack/flutter_paystack.dart';
 
+
+String paystackPublicKey = 'pk_live_c705a0cba0ef54860d1187f346d2d4698c114134';
+const String appName = 'Upspring';
 class HomeScreen extends StatelessWidget {
   // ignore: close_sinks
   final AuthenticationBloc authenticationBloc =
       AuthenticationBlocController().authenticationBloc;
+
 
   @override
   Widget build(BuildContext context) {
@@ -60,6 +65,12 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
       _selectedIndex = index;
     });
   }
+  @override
+  void initState() {
+    PaystackPlugin.initialize(publicKey: paystackPublicKey);
+    super.initState();
+  }
+
 
   @override
   Widget build(BuildContext context) {
