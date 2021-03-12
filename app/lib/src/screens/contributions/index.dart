@@ -50,33 +50,33 @@ class ContributionsHome extends StatelessWidget {
               cardTitle: 'My Wallet',
             )),
         GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, '/wallet');
-          },
-          child:  ContributionIndexCard(
-    cardBackgroundColor: ColorConstants.contributionLightBlue,
-    cardMainColor: ColorConstants.contributionMainBlue,
-    cardAltColor: ColorConstants.contributionAltBlue,
-    cardIcon: Icons.lock_outline,
-    moneyValue: 1389490.40,
-    cardTitle: 'Locked Plan',
-    )),
+            onTap: () {
+              Navigator.pushNamed(context, '/locked');
+            },
+            child: ContributionIndexCard(
+              cardBackgroundColor: ColorConstants.contributionLightBlue,
+              cardMainColor: ColorConstants.contributionMainBlue,
+              cardAltColor: ColorConstants.contributionAltBlue,
+              cardIcon: Icons.lock_outline,
+              moneyValue: 1389490.40,
+              cardTitle: 'Locked Plan',
+            )),
         GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, '/wallet');
-          },
-          child: ContributionIndexCard(
-    cardBackgroundColor: ColorConstants.contributionLightGreen,
-    cardMainColor: ColorConstants.contributionMainGreen,
-    cardAltColor: ColorConstants.contributionAltGreen,
-    moneyValue: 9348589,
-    cardIcon: Icons.shield,
-    cardTitle: 'Fixed Plan',
-    )),
+            onTap: () {
+              Navigator.pushNamed(context, '/wallet');
+            },
+            child: ContributionIndexCard(
+              cardBackgroundColor: ColorConstants.contributionLightGreen,
+              cardMainColor: ColorConstants.contributionMainGreen,
+              cardAltColor: ColorConstants.contributionAltGreen,
+              moneyValue: 9348589,
+              cardIcon: Icons.shield,
+              cardTitle: 'Fixed Plan',
+            )),
         GestureDetector(
-          onTap: () {
-            Navigator.pushNamed(context, '/wallet');
-          },
+            onTap: () {
+              Navigator.pushNamed(context, '/wallet');
+            },
             child: ContributionIndexCard(
               cardBackgroundColor: ColorConstants.contributionLightPurple,
               cardMainColor: ColorConstants.contributionMainPurple,

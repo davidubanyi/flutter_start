@@ -30,6 +30,7 @@ dependencies:
   cupertino_icons: ^1.0.0
   flutter_paystack: ^1.0.4+1
   currency_text_input_formatter: ^2.0.0
+  select_form_field: "^1.1.0"
   provider:
   webview_flutter: ^1.0.6
   flutter_bloc: ^6.0.6
@@ -40,6 +41,7 @@ dependencies:
   firebase_core: "^0.7.0"
   firebase_auth: "^0.20.1"
   cached_network_image: ^2.3.3
+  http: ^0.13.0
   flutter_money_formatter:
     git:
       url: git://github.com/anisalibegic/flutter_money_formatter.git
@@ -52,6 +54,7 @@ dev_dependencies:
   flutter_native_splash: ^0.1.9
 dependency_overrides:
   intl: ^0.17.0
+  http: ^0.12.0
 
 flutter_native_splash:
   image: assets/images/logo.png

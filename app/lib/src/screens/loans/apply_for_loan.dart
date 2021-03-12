@@ -1,6 +1,7 @@
 import 'package:app/src/config/color_constants.dart';
 import 'package:flutter/material.dart';
 import 'package:currency_text_input_formatter/currency_text_input_formatter.dart';
+import 'package:select_form_field/select_form_field.dart';
 
 class ApplyForLoanForm extends StatefulWidget {
   @override
@@ -9,6 +10,11 @@ class ApplyForLoanForm extends StatefulWidget {
 
 class _ApplyForLoanFormState extends State<ApplyForLoanForm> {
   final _formKey = GlobalKey<FormState>();
+  final List<Map<String, dynamic>> _frequencyOptions = [
+    {'value': 'weekly', 'label': 'Weekly Contributions'},
+    {'value': 'monthly', 'label': 'Monthly Contributions'},
+    {'value': 'daily', 'label': 'Daily Contributions'}
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +23,7 @@ class _ApplyForLoanFormState extends State<ApplyForLoanForm> {
       child: Padding(
         padding: const EdgeInsets.all(20.0),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             SizedBox(
               height: 20,
@@ -37,6 +44,22 @@ class _ApplyForLoanFormState extends State<ApplyForLoanForm> {
                       borderSide: BorderSide(
                           color: ColorConstants.containerBorderColor,
                           width: 1))),
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            SelectFormField(
+              decoration: InputDecoration(
+                labelText: 'Contribution Frequency',
+                labelStyle: TextStyle(color: Colors.black87),
+                enabledBorder: OutlineInputBorder(
+                    borderSide: BorderSide(
+                        color: ColorConstants.containerBorderColor, width: 1)),
+              ),
+              type: SelectFormFieldType.dropdown,
+              labelText: 'Repayment Frequency',
+              items: _frequencyOptions,
+              initialValue: 'daily',
             )
           ],
         ),
@@ -51,7 +74,7 @@ class FormTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(vertical: 25),
+      padding: EdgeInsets.symmetric(vertical: 35),
       child: Text(
         formTitle,
         style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
